@@ -1,4 +1,5 @@
 #include <iostream>
+
 //ไม่ต้องเติม function main()
 
 char before(char input) {
