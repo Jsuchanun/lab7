@@ -15,9 +15,9 @@ int main() {
     cout << name << ": ";
     cin >> studentID;
 
-    int GEAR = stoi(studentID.substr(0, 2)) - 12;  
+    int gear = ((studentID[0] - '0'),(studentID[1] - '0')) - 12;
 
-    cout << "Fahsai: I think you may be GEAR " << GEAR << ". I have a free movie ticket for you." << "\n";
+    cout << "Fahsai: I think you may be GEAR " << gear << ". I have a free movie ticket for you." << "\n";
     cout << "Fahsai: Let's go to the cinema together!!!" << "\n";
 
     cout << "Fahsai: What movie do you want to watch?\n";
