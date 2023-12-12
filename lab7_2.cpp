@@ -1,13 +1,15 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-    string name, movie, freeday, messages, studentID;
-    
+    string name, moviefav, freeday, messages;
+    int studentID;
 
     cout << "Fahsai: Sawadee ka...Can you tell me your name?\n";
     cout << "?????: ";
-    cin >> name;
+    getline(cin, name);
+    
 
     cout << "Fahsai: Wow!!! " << name << " is a really cool name." << "\n";
 
@@ -15,24 +17,25 @@ int main() {
     cout << name << ": ";
     cin >> studentID;
 
-    int gear = ((studentID[0] - '0'),(studentID[1] - '0')) - 12;
-
+    int gear = (studentID/10000000)-12;
+    
     cout << "Fahsai: I think you may be GEAR " << gear << ". I have a free movie ticket for you." << "\n";
     cout << "Fahsai: Let's go to the cinema together!!!" << "\n";
-
+    
+    cin.ignore();
     cout << "Fahsai: What movie do you want to watch?\n";
     cout << name << ": ";
-    cin >> movie;
+    getline(cin,moviefav);
 
     cout << "Fahsai: So....which day are you free to go with me?\n";
     cout << name << ": ";
-    cin >> freeday;
+    getline(cin,freeday);
 
-    cout << "Fahsai: " << freeday << "....that is OK!!! I'm looking forward to watching\n" << movie << " with you.\n";
+    cout << "Fahsai: " << freeday << "....that is OK!!! I'm looking forward to watching " << moviefav << " with you.\n";
     cout << name << ": ";
-    cin >> messages;
+    getline(cin,messages);
 
-    cout << "Fahsai: 555+ see you " << freeday << ". Bye Bye \(^ ^)/";
+    cout << "Fahsai: 555+ see you " << freeday << ". Bye Bye \\(^ ^)/";
 
     return 0;
 
